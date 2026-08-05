@@ -1,21 +1,13 @@
 # Dependencies
 node_modules/
-package-lock.json
-
-# Playwright
-test-results/
-playwright-report/
-blob-report/
 
 # Environment files
 .env
 .env.*
-
-# VS Code
-.vscode/
 
 # Playwright
 /playwright-report/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+.vscode/
