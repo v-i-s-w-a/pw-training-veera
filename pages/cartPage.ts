@@ -7,10 +7,11 @@ export class CartPage extends BasePage {
 itemNames(): Locator {
   return this.page.getByTestId('inventory-item-name');
 }
-removeItems(productName: string): Locator {
-    return this.page
+async removeItem(productName: string) {
+    await this.page
       .locator('.cart_item')
       .filter({ hasText: productName })
-      .getByRole('button', { name: /remove/i });
+      .getByRole('button', { name: /remove/i })
+      .click();
   }
 }

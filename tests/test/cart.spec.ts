@@ -6,7 +6,7 @@ test('Add and Remove Items from Cart', async ({ cartPage }) => {
         'Sauce Labs Bike Light',
     ]);
 
-    await cartPage.removeItems('Sauce Labs Backpack').click();
+    await cartPage.removeItem('Sauce Labs Backpack');
 
     await expect(cartPage.itemNames()).toHaveText('Sauce Labs Bike Light');
 });
