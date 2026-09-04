@@ -5,7 +5,7 @@ setup('authenticate as standard user', async ({ page }) => {
     const loginPage = new LoginPage(page);
     await loginPage.open();
     await loginPage.login('standard_user', 'secret_sauce');
-    await page.context().storageState({ path: '.auth/standard.json' });
+    await page.context().storageState({ path: '.auth/user.json' });
 });
 
 setup('authenticate as problem user', async ({ page }) => {
